@@ -17,7 +17,7 @@ const Statistics = () => {
     return (
 
         <div>
-            <h1 className='button mt-5'>Recharts For the full stack developer course Quiz</h1>
+            <h1 className='button mt-5'>Recharts For Total Quiz</h1>
             <h1 className='text-5xl text-center'> <FontAwesomeIcon icon={faArrowDown} /></h1>
 
             <BarChart width={500} height={500} data={data}>

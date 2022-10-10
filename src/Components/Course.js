@@ -14,7 +14,7 @@ const Course = () => {
             <div>
                 <h1 className=' bg-cyan-200 p-5 my-3 rounded-lg text-2xl font-semibold shadow-xl w-fit mx-auto'>Course Name: {name}</h1>
                <div>
-               <h1 className='bg-cyan-600 p-3 rounded-md text-white text-lg font-semibold text-center'>Please solution this Quiz</h1>
+               <h1 className='bg-cyan-600 p-3 rounded-md text-gray-600 text-lg font-semibold text-center'>Please solution this Quiz</h1>
               <h1 className='text-5xl text-center'> <FontAwesomeIcon icon={faArrowDown} /></h1>
                </div>
             </div>
