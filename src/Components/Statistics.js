@@ -16,15 +16,17 @@ const Statistics = () => {
 
     return (
 
-        <div>
+        <div >
             <h1 className='button mt-5'>Recharts For Total Quiz</h1>
             <h1 className='text-5xl text-center'> <FontAwesomeIcon icon={faArrowDown} /></h1>
 
-            <BarChart width={500} height={500} data={data}>
+            <div className=' w-fit mx-auto'>
+            <BarChart className='border-blue-500 border-4 ' width={350} height={500} data={data}>
                 <XAxis dataKey="name"></XAxis>
                 <YAxis dataKey="total"></YAxis>
                 <Bar dataKey="total" fill='green'></Bar>
             </BarChart>
+            </div>
         </div>
 
     );

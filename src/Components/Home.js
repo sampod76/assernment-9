@@ -17,7 +17,7 @@ const Home = () => {
                     <img className=' w-10 mx-auto mt-3 ' src="https://i.ibb.co/tsHrkmf/react.png" alt="react" border="0" />
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-2 my-4'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 my-4'>
                 {
                     getQuizs.map(quiz => <Quiz key={quiz.id} quiz={quiz}></Quiz>)
                 }
