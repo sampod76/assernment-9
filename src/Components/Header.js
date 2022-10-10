@@ -8,9 +8,9 @@ const Header = () => {
                 <NavLink to='/' className='text-xl font-bold text-green-800'>Quiz Bank</NavLink>
             </div>
             <div className='flex'>
-            <NavLink to='/'  className={({ isActive }) =>
+            <NavLink to='/courses'  className={({ isActive }) =>
               isActive ? 'mx-2 underline decoration-cyan-500 decoration-4' : 'mx-2'
-            }>Quiz </NavLink>
+            }>Courses </NavLink>
             <NavLink  to='/statistics' className={({ isActive }) =>
               isActive ? 'mx-2 underline decoration-cyan-500 decoration-4' : 'mx-2'
             }>Statistics</NavLink>
