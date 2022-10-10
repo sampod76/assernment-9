@@ -14,15 +14,16 @@ const Question = ({question, index}) => {
 
 // console.log(question)
     return (
-        <div className='border-2 border-slate-800 my-2 text-justify p-3 '>
-           <div className=' flex justify-between'>
-           <h1>Quiz {index+1} {name}</h1>
-           <h1><FontAwesomeIcon onClick={handelAnswer} icon={faEye} /></h1>
+        <div className='rounded-lg my-5 text-justify p-5 bg-slate-100 shadow-xl'>
+           <div className=' flex justify-between text-xl font-semibold '>
+           <h1 className='w-[90%]'>Quiz {index+1} {name}</h1>
+          
+           <h1 className=''><FontAwesomeIcon onClick={handelAnswer} icon={faEye} /></h1>
            </div>
             
-            <div>
+            <div className='text-left p-5'>
          {
-            options.map((ans,index) => <li key={index} ans={ans}>{ans}</li>)
+            options.map((ans,index) => <li className='capitalize p-2 hover:bg-blue-700 hover:text-white hover:rounded-lg' key={index} ans={ans}>{ans}</li>)
          }
             </div>
         </div>

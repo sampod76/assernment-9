@@ -11,6 +11,8 @@ import Error from './Components/Error';
 import Header from './Components/Header';
 import Home from './Components/Home';
 import Course from './Components/Course';
+import Statistics from './Components/Statistics';
+import Blog from './Components/Blog';
 
 function App() {
   const router =createBrowserRouter([
@@ -33,6 +35,14 @@ function App() {
           path:'/courses/:quizId',
           loader: async({params})=>fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`),
           element:<Course></Course>
+        },
+        {
+          path:'/statistics',
+          element:<Statistics></Statistics>
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
 
       ]
@@ -44,7 +54,7 @@ function App() {
     }
   ])
   return (
-    <div className="App">
+    <div className="">
      <RouterProvider router={router}></RouterProvider>
     </div>
   );
