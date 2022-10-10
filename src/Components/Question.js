@@ -1,17 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import Swal from 'sweetalert2'
 
+
 const Question = ({ question, index }) => {
     const { question: name, correctAnswer, options } = question
+    const [isActive, setIsActive] = useState(true);
+    
     const handelAnswer = () => {
         Swal.fire(
             'The quiz right answer',
             `${correctAnswer}`
         )
     }
-    const handelRightAnswer =(ans)=>{
+    const handelRightAnswer =(ans,e)=>{
 
     if(ans === correctAnswer){
         Swal.fire({
@@ -21,6 +24,8 @@ const Question = ({ question, index }) => {
             showConfirmButton: false,
             timer: 1500
           })
+          setIsActive(true);
+     
     }else{
         Swal.fire({
             icon: 'error',
@@ -28,6 +33,7 @@ const Question = ({ question, index }) => {
             text: 'You are select wrong answer!',
             
           })
+          setIsActive(false);
     }
 
     }
@@ -45,7 +51,7 @@ const Question = ({ question, index }) => {
                 {
                     options.map((ans, index) => <li 
                     onClick={()=>handelRightAnswer(ans)}
-                    className='capitalize p-2 hover:bg-blue-700 hover:text-white hover:rounded-lg'
+                    className={`capitalize p-2 my-2 rounded-lg text-white hover:bg-blue-700 hover:text-white hover:rounded-lg ${isActive ? 'bg-green-800' : 'bg-red-700'}`}
                     key={index}
                     ans={ans}>
                         {ans}
