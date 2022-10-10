@@ -13,11 +13,11 @@ const Question = ({ question, index }) => {
     }
     const handelRightAnswer =(ans)=>{
 
-    if(ans == correctAnswer){
+    if(ans === correctAnswer){
         Swal.fire({
             position: 'center',
             icon: 'success',
-            title: 'Your work has been saved',
+            title: 'You are select Right answer',
             showConfirmButton: false,
             timer: 1500
           })
@@ -25,7 +25,7 @@ const Question = ({ question, index }) => {
         Swal.fire({
             icon: 'error',
             title: 'Oops...',
-            text: 'Something went wrong!',
+            text: 'You are select wrong answer!',
             
           })
     }
@@ -41,7 +41,7 @@ const Question = ({ question, index }) => {
                 <h1 className=''><FontAwesomeIcon onClick={handelAnswer} icon={faEye} /></h1>
             </div>
 
-            <div className='text-left p-5'>
+            <div className='text-left p-5 cursor-pointer'>
                 {
                     options.map((ans, index) => <li 
                     onClick={()=>handelRightAnswer(ans)}
