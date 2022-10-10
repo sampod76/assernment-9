@@ -8,18 +8,19 @@ import Quiz from './Quiz';
 
 const Statistics = () => {
     const getQuizData = useLoaderData().data
-    console.log(getQuizData)
+    // console.log(getQuizData)
 
     const data = getQuizData
 
     return (
 
         <div>
+            <h1 className='button mt-5'>Recharts For the full stack developer course Quiz</h1>
 
             <BarChart width={500} height={500} data={data}>
                 <XAxis dataKey="name"></XAxis>
                 <YAxis dataKey="total"></YAxis>
-                <Bar dataKey="total" fill='red'></Bar>
+                <Bar dataKey="total" fill='green'></Bar>
             </BarChart>
         </div>
 
