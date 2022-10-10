@@ -20,9 +20,10 @@ const Course = () => {
 
                 <div className=''>
                   
-                        <div className='flex sticky top-0'>
-                            <h1 className=' bg-cyan-200 p-5 my-3 rounded-lg text-2xl font-semibold shadow-xl w-fit mx-auto'>Course Name: {name}</h1>
-                            <h1 className=' bg-cyan-200 p-5 my-3 rounded-lg text-2xl font-semibold shadow-xl w-fit mx-auto'>Right Quiz: {right.length}</h1> <h1 className='text-red-600 bg-cyan-200 p-5 my-3 rounded-lg text-2xl font-semibold shadow-xl w-fit mx-auto'>Wrong Wrong: {wrong.length}</h1></div>
+                        <div className='grid md:grid-cols-3 sticky top-0 my-2 gap-1'>
+                            <h1 className=' bg-cyan-200 p-1 md:p-5   rounded-lg text-base mt-0 sm:mt-2 md:text-2xl font-semibold shadow-xl  '>Quiz for : {name}</h1>
+                            <h1 className=' bg-cyan-200 p-1 md:p-5   rounded-lg text-base mt-0 sm:mt-2 md:text-2xl font-semibold shadow-xl  '>Right Quiz: {right.length}</h1> 
+                            <h1 className='text-red-600 bg-cyan-200 p-1 md:p-5  rounded-lg text-base mt-0 sm:mt-2 md:text-2xl font-semibold shadow-xl  '>Wrong Wrong: {wrong.length}</h1></div>
 
                         <div>
                             <h1 className='bg-cyan-600 p-3 rounded-md text-gray-600 text-lg font-semibold '>Please solution this Quiz </h1>
