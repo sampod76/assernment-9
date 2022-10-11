@@ -7,7 +7,7 @@ const Quiz = ({ quiz }) => {
     return (
         <div>
             <div className="card card-compact  bg-base-100 shadow-xl p-3">
-                <figure><img src={logo} alt="" /></figure>
+                <img className='bg-gray-400' src={logo} alt="" />
                 <h2 className="card-title">{name}-Total Quiz: {total}</h2>
                 <Link to={`/courses/${id}`} className="btn btn-primary ">Start Practice</Link>
             </div>

@@ -19,6 +19,10 @@ const Statistics = () => {
     return (
 
         <div >
+            {/* <input type="checkbox" name="" id="" /><span>select 1</span><br />
+            <input type="checkbox" name="" id="" /><span>select 2</span><br />
+            <input type="checkbox" name="" id="" /><span>select 3</span><br /> */}
+            
             <h1 className='button mt-5'>Recharts For Total Quiz</h1>
             <h1 className='text-5xl text-center'> <FontAwesomeIcon icon={faArrowDown} /></h1>
 
