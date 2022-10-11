@@ -6,13 +6,15 @@ import {
 } from 'recharts';
 import Quiz from './Quiz';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-  import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 const Statistics = () => {
     const getQuizData = useLoaderData().data
     // console.log(getQuizData)
 
     const data = getQuizData
+ 
+ 
 
     return (
 
@@ -21,12 +23,13 @@ const Statistics = () => {
             <h1 className='text-5xl text-center'> <FontAwesomeIcon icon={faArrowDown} /></h1>
 
             <div className=' w-fit mx-auto'>
-            <BarChart className='border-blue-500 border-4 ' width={350} height={500} data={data}>
-                <XAxis dataKey="name"></XAxis>
-                <YAxis dataKey="total"></YAxis>
-                <Bar dataKey="total" fill='green'></Bar>
-            </BarChart>
+                <BarChart className='border-blue-500 border-4 ' width={330} height={500} data={data}>
+                    <XAxis dataKey="name"></XAxis>
+                    <YAxis dataKey="total"></YAxis>
+                    <Bar dataKey="total" fill='green'></Bar>
+                </BarChart>
             </div>
+           
         </div>
 
     );
